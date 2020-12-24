@@ -1,0 +1,12 @@
+server:
+  port: 8090
+spring:
+  datasource:
+    username: schoolHelp
+    password: jdruh9ahtys#@w757y@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://120.24.151.246/schoolHelp?serverTimezone=GMT%2b8&characterEncoding=UTF-8&useUnicode=true
+    type: com.mysql.cj.jdbc.MysqlDataSource
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true

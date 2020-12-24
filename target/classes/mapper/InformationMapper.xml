@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.University.mapper.InformationDao">
+    <resultMap id="BaseResultMap" type="com.University.model.Information">
+        <id column="information_id" property="informationId" jdbcType="INTEGER"/>
+        <result column="information_type" property="informationType" jdbcType="INTEGER"/>
+        <result column="information_title" property="informationTitle" jdbcType="VARCHAR" />
+        <result column="information_content" property="informationContent" jdbcType="VARCHAR" />
+        <result column="information_money" property="informationMoney" jdbcType="DOUBLE" />
+        <result column="information_status" property="informationStatus" jdbcType="INTEGER" />
+        <result column="information_user" property="informationUser" jdbcType="INTEGER" />
+        <result column="information_place" property="informationPlace" jdbcType="INTEGER" />
+        <result column="information_starttime" property="informationStarttime" jdbcType="DATE" />
+        <result column="information_latitude" property="informationLatitude" jdbcType="VARCHAR" />
+        <result column="information_longitude" property="informationLongitude" jdbcType="VARCHAR" />
+        <result column="information_endtime" property="informationEndtime" jdbcType="VARCHAR" />
+        <result column="information_town" property="informationTown" jdbcType="VARCHAR" />
+        <result column="information_detaiLocation" property="informationDetailocation" jdbcType="VARCHAR" />
+        <result column="information_limitSex" property="informationLimitSex" jdbcType="VARCHAR" />
+        <result column="information_peopleNum" property="informationPeopleNum" jdbcType="INTEGER"/>
+        <result column="information_images" property="informationImages" jdbcType="VARCHAR"/>
+        <association property="user" column="uid" javaType="user">
+            <id column="user_id" property="userId" jdbcType="INTEGER"></id>
+            <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+            <result column="nickname" property="nickname" jdbcType="VARCHAR"/>
+            <result column="avatarurl" property="avatarurl" jdbcType="VARCHAR"/>
+            <result column="sex" property="sex" jdbcType="INTEGER"/>
+            <result column="city" property="city" jdbcType="VARCHAR"/>
+            <result column="phone" property="phone" jdbcType="VARCHAR"/>
+            <result column="integration" property="integration" jdbcType="INTEGER"/>
+            <result column="role_id" property="roleId" jdbcType="INTEGER"/>
+            <result column="hobby_help_id" property="hobbyHelpId" jdbcType="INTEGER"/>
+            <result column="openId" property="openId" jdbcType="VARCHAR"/>
+            <result column="unionId" property="unionId" jdbcType="VARCHAR"/>
+        </association>
+    </resultMap>
+    <select id="selectInformation" resultMap="BaseResultMap">
+        select * from information_help,user where information_help.information_user=user.user_id AND information_status = 0
+    </select>
+    <select id="selectInformationById" resultMap="BaseResultMap" >
+        select * from information_help,user where information_help.information_user=user.user_id AND information_id = #{informationId}
+    </select>
+    <select id="selectInformationByType" resultMap="BaseResultMap" >
+        select * from information_help,user where information_help.information_user=user.user_id AND information_type = #{informationType}
+    </select>
+</mapper>

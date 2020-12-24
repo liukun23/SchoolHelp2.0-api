@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.University.auth.test.JwtTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.154 s <<< FAILURE! - in com.University.auth.test.JwtTest
+testParseToken(com.University.auth.test.JwtTest)  Time elapsed: 0.916 s  <<< ERROR!
+io.jsonwebtoken.SignatureException: Unable to verify RSA signature using configured PublicKey. Signature length not correct: got 126 but was expecting 128
+	at com.University.auth.test.JwtTest.testParseToken(JwtTest.java:36)
+Caused by: java.security.SignatureException: Signature length not correct: got 126 but was expecting 128
+	at com.University.auth.test.JwtTest.testParseToken(JwtTest.java:36)
+

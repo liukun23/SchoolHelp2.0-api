@@ -1,0 +1,28 @@
+server:
+  port: 80
+spring:
+  datasource:
+    username: schoolHelp
+    password: jdruh9ahtys#@w757y@
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://120.24.151.246/schoolHelp?serverTimezone=GMT%2b8&characterEncoding=UTF-8&useUnicode=true
+    type: com.mysql.cj.jdbc.MysqlDataSource
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  jackson:
+    time-zone: GMT+8
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.University.model
+school:
+  jwt:
+    secret: SchoolHelp@liukun(login}*^31)&haha% # 登录校验的密钥
+    pubKeyPath: F:\\tmp\\rsa\\rsa.pub # 公钥地址
+    priKeyPath: F:\\tmp\\rsa\\rsa.pri # 私钥地址
+    expire: 30 # 过期时间,单位分钟
+    cookieName: SH_TOKEN #cookie的名称
+    cookieMaxAge: 1800 #cookie过期时间单位是30*60秒 ，要和jwt的过期时间一致

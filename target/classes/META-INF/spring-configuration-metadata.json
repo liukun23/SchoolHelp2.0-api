@@ -1,0 +1,54 @@
+{
+  "groups": [
+    {
+      "name": "school.jwt",
+      "type": "com.University.config.JwtProperties",
+      "sourceType": "com.University.config.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "school.jwt.cookie-max-age",
+      "type": "java.lang.Integer",
+      "sourceType": "com.University.config.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "school.jwt.cookie-name",
+      "type": "java.lang.String",
+      "sourceType": "com.University.config.JwtProperties"
+    },
+    {
+      "name": "school.jwt.expire",
+      "type": "java.lang.Integer",
+      "sourceType": "com.University.config.JwtProperties",
+      "defaultValue": 0
+    },
+    {
+      "name": "school.jwt.pri-key-path",
+      "type": "java.lang.String",
+      "sourceType": "com.University.config.JwtProperties"
+    },
+    {
+      "name": "school.jwt.private-key",
+      "type": "java.security.PrivateKey",
+      "sourceType": "com.University.config.JwtProperties"
+    },
+    {
+      "name": "school.jwt.pub-key-path",
+      "type": "java.lang.String",
+      "sourceType": "com.University.config.JwtProperties"
+    },
+    {
+      "name": "school.jwt.public-key",
+      "type": "java.security.PublicKey",
+      "sourceType": "com.University.config.JwtProperties"
+    },
+    {
+      "name": "school.jwt.secret",
+      "type": "java.lang.String",
+      "sourceType": "com.University.config.JwtProperties"
+    }
+  ],
+  "hints": []
+}
